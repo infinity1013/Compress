@@ -15,9 +15,10 @@
 	<div id="box">
 		<div id="form_content">
 			<form enctype="multipart/form-data" method="POST" action="/compress">
+			<div style="display:flex; ">
 				<label>Email</label>
-		    	<input type="Email" name="email" class="bd1" required>
-		    	<br>
+		    		<input type="Email" name="email" class="bd1" required />
+			</div>
 		    	<br>
 		    	<div style="display:flex; ">
 			    	<label for="factor">ScaleBy </label>
@@ -26,13 +27,13 @@
 		    	<br>
 		    	<div class="custom">
 			    	<label for="file-upload">Upload Video</label>
-					<input id="file-upload" name="filename" type="file" style="display:none;" required>
-				</div>
-				<br>
-				<br>
-		 	    <div id="bd">
-			  		<input class="btn btn-warning" type="submit" value="Submit">
-			  	</div>
+				<input id="file-upload" name="filename" type="file" style="display:none;" required>
+			</div>
+			<br>
+			<br>
+		 	<div id="bd">
+			  	<input class="btn btn-warning" type="submit" value="Submit">
+			</div>
 			</form>
 		</div>
 	</div>
