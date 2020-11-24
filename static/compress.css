@@ -41,10 +41,10 @@ h5{
 }
 
 .custom {
-  border: 2px solid orange;
-  display: inline-block;
-  padding: 2px 2px;
-  cursor: pointer;
+	 border: 2px solid orange;
+	 display: inline-block;
+	 padding: 2px 2px;
+	 cursor: pointer;
 }
 
 #box{
@@ -65,3 +65,53 @@ h5{
 #bd{
 	margin-left:70px;
 }
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dropbtn {
+	color: white;
+	margin-left: 2px;
+	padding: 5px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #2980B9;
+}
+
+.dropdown {
+	position: absolute;
+	margin-left: 2px;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	margin-left: 2px;
+	padding: 5px 5px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
