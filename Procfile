@@ -1,1 +1,1 @@
-web: gunicorn compress:app
+web: gunicorn compress:app --timeout 60
