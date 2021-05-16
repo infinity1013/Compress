@@ -1,7 +1,8 @@
 #importing different pakages
-from flask import Flask,render_template,request,url_for,redirect
+from flask import Flask,render_template,request,url_for,redirect,send_file
 from flask_mail import Mail,Message 
 from werkzeug.utils import secure_filename
+import time
 import cv2
 import os
 # re module provides support 
@@ -66,7 +67,7 @@ def compress():
 	cap=cv2.VideoCapture(videoFile)
 
 	#output file name
-	output_vedio_file="compressed_"+fn
+	output_vedio_file="compressed_"+time.strftime("%Y%m%d_%H%M%S")+ext
 
 	#making mp4 output vedio file
 	fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -98,6 +99,8 @@ def compress():
 	out.release()
 
 	try:
+		return send_file(output_vedio_file,as_attachment=True)
+	
 		#Message Content that is to be emailed 
 		msg=Message(
 			subject='Compressed video file',
@@ -115,7 +118,7 @@ def compress():
 		return render_template("compress.html",text="Successfully mailed the Compressed videofile to your provided email id")	
 
 	except Exception:
-		return render_template("compress.html",text="Sorry!!! Currently application is out of service")
+		return render_template("compress.html",text="Sorry!!! Unable to send to mail... Gmail have protections to avoid their service being used to deliver spam")
 		
 if __name__=="__main__":
 	app.run()
