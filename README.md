@@ -10,3 +10,8 @@ Folowing are the steps that i followed
 1) extracted all the frames from a provided video file
 2) Resized(Scale down) all the frames to given percentage of original size 
 3) finally merged all the frames to a video again
+
+
+### Reference Video
+https://user-images.githubusercontent.com/68748614/137611452-2b9169c0-8dac-42ae-b629-c8250e3adbf4.mp4
+
